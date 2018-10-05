@@ -3,8 +3,8 @@ const path = require('path');
 
 module.exports = {
   ...webpack,
+  devtool: 'inline-source-map',
   mode: 'development',
-  devtool: 'source-map',
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     compress: true,

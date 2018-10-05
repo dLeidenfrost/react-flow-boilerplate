@@ -4,7 +4,8 @@
   "description": "Little biolerplate of react app with flow enabled",
   "main": "index.js",
   "scripts": {
-    "start": "webpack-dev-server --config webpack.dev.config.js --open",
+    "start": "webpack-dev-server --config webpack.dev.config.js --open --trace-deprecation",
+    "build": "webpack --config webpack.prod.config.js",
     "test": "./node_modules/flow-bin/flow-osx-v0.82.0/flow"
   },
   "repository": {
@@ -36,6 +37,7 @@
     "babel-loader": "^8.0.4",
     "flow-babel-webpack-plugin": "^1.1.1",
     "flow-check-webpack-plugin": "^0.1.3",
+    "html-webpack-plugin": "^3.2.0",
     "mini-css-extract-plugin": "^0.4.3",
     "node-sass": "^4.9.3",
     "sass-loader": "^7.1.0",

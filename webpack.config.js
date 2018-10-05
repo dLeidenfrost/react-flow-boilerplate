@@ -2,7 +2,10 @@
 const path = require('path');
 // https://github.com/webpack-contrib/mini-css-extract-plugin
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
-var FlowBabelWebpackPlugin = require('flow-babel-webpack-plugin');
+// https://github.com/zhirzh/flow-babel-webpack-plugin#readme
+const FlowBabelWebpackPlugin = require('flow-babel-webpack-plugin');
+// https://github.com/jantimon/html-webpack-plugin
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 // Custom style loader to create a large css file
 const styleLoader = {
@@ -11,16 +14,20 @@ const styleLoader = {
     publicPath: path.resolve(__dirname, 'dist'),
   }
 };
+// https://github.com/webpack-contrib/sass-loader
+const sassLoader = {
+  loader: 'sass-loader',
+  options: {
+    sourceMap: true,
+  }
+};
 // Module general definition
 module.exports = {
-  entry: {
-    app: path.resolve(__dirname, 'src/index.jsx'),
-  },
+  entry: path.resolve(__dirname, 'src/index.jsx'),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].bundle.js',
+    filename: 'main.bundle.js',
   },
-  devtool: 'inline-source-map',
   resolve: {
     modules: [path.resolve(__dirname, 'node_modules')],
     extensions: ['*', '.js', '.jsx'],
@@ -41,11 +48,16 @@ module.exports = {
       },
       {
         test: /\.(s*)css$/,
-        use: [styleLoader, 'css-loader', 'sass-loader']
+        use: [styleLoader, 'css-loader', sassLoader]
       },
     ],
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      title: 'React flow biolerplate',
+      template: path.resolve(__dirname, 'src/template/index.html'),
+      hash: true,
+    }),
     new MiniCssExtractPlugin({ filename: '[name].bundle.css', chunkFilename: '[id].css' }),
     new FlowBabelWebpackPlugin(),
   ]
