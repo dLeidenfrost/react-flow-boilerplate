@@ -1,13 +1,13 @@
 /* @flow */
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import Home from './components/Home';
+import App from './components/App';
 
 const rootComponent = document.getElementById('app');
 
 if (rootComponent) {
   ReactDOM.render(
-    <Home name="Daniel" n={10} />,
+    <App />,
     rootComponent,
   );
 }

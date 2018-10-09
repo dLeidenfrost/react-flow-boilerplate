@@ -5,7 +5,7 @@ const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 // https://github.com/zhirzh/flow-babel-webpack-plugin#readme
 const FlowBabelWebpackPlugin = require('flow-babel-webpack-plugin');
 // https://github.com/jantimon/html-webpack-plugin
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 // Custom style loader to create a large css file
 const styleLoader = {
@@ -49,7 +49,7 @@ module.exports = {
       {
         test: /\.(s*)css$/,
         use: [styleLoader, 'css-loader', sassLoader]
-      },
+      }
     ],
   },
   plugins: [
