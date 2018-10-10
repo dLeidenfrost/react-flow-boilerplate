@@ -1,0 +1,21 @@
+@import '../../theme/export';
+
+.root {
+  flex-grow: 1;
+  padding-top: 100px;
+}
+
+.paper {
+  padding: 1rem;
+}
+
+.divider {
+  background-color: $color-lightest-grey;
+  height: 1px;
+  margin: 0 0 8px;
+  width: 100%;
+}
+
+.content {
+  padding: 1.125rem;
+}

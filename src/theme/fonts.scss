@@ -1,0 +1,34 @@
+$font-family: 'Roboto';
+$font-style: 'normal';
+
+$font-family-regular-url: url('/assets/fonts/roboto-v18-latin-regular.woff2') format('woff2'),
+url('/assets/fonts/roboto-v18-latin-regular.eot') format('eot'),
+url('/assets/fonts/roboto-v18-latin-regular.woff') format('woff'),
+url('/assets/fonts/roboto-v18-latin-regular.ttf') format('truetype');
+
+$font-family-light-url: url('/assets/fonts/roboto-v18-latin-100.woff2') format('woff2'),
+url('/assets/fonts/roboto-v18-latin-100.eot') format('eot'),
+url('/assets/fonts/roboto-v18-latin-100.woff') format('woff'),
+url('/assets/fonts/roboto-v18-latin-100.ttf') format('truetype');
+
+$font-family-medium-url: url('/assets/fonts/roboto-v18-latin-500.woff2') format('woff2'),
+url('/assets/fonts/roboto-v18-latin-500.eot') format('eot'),
+url('/assets/fonts/roboto-v18-latin-500.woff') format('woff'),
+url('/assets/fonts/roboto-v18-latin-500.ttf') format('truetype');
+
+$font-family-bold-url: url('/assets/fonts/roboto-v18-latin-700.woff2') format('woff2'),
+url('/assets/fonts/roboto-v18-latin-700.eot') format('eot'),
+url('/assets/fonts/roboto-v18-latin-700.woff') format('woff'),
+url('/assets/fonts/roboto-v18-latin-700.ttf') format('truetype');
+
+$font-size: 1rem;
+
+$font-size-h1: 6rem;
+$font-size-h2: 3.75rem;
+$font-size-h3: 3rem;
+$font-size-h4: 2.125rem;
+$font-size-h5: 2.125rem;
+$font-size-h6: 1.25rem;
+$font-size-p: 1rem;
+$font-size-i: .875rem;
+$font-size-span: .875rem;

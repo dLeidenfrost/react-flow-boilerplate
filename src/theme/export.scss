@@ -1,0 +1,71 @@
+@import '../theme/colors';
+@import '../theme/layout';
+
+// Color shades/lights distances.
+$mix-percentage-dark: 80%;
+$mix-percentage-darker: 60%;
+$mix-percentage-darkest: 40%;
+$mix-percentage-darkest-s: 20%;
+$mix-percentage-light: 80%;
+$mix-percentage-lighter: 60%;
+$mix-percentage-lightest: 40%;
+$mix-percentage-lightest-s: 20%;
+
+$color-primary-light: mix($color-primary, $color-white, $mix-percentage-light);
+$color-primary-lighter: mix($color-primary, $color-white, $mix-percentage-lighter);
+$color-primary-lightest: mix($color-primary, $color-white, $mix-percentage-lightest);
+$color-primary-lightest-s: mix($color-primary, $color-white, $mix-percentage-lightest-s);
+$color-primary-dark: mix($color-primary, $color-black, $mix-percentage-dark);
+$color-primary-darker: mix($color-primary, $color-black, $mix-percentage-darker);
+$color-primary-darkest: mix($color-primary, $color-black, $mix-percentage-darkest);
+$color-primary-darkest-s: mix($color-primary, $color-black, $mix-percentage-darkest-s);
+
+$color-secondary-light: mix($color-secondary, $color-white, $mix-percentage-light);
+$color-secondary-lighter: mix($color-secondary, $color-white, $mix-percentage-lighter);
+$color-secondary-lightest: mix($color-secondary, $color-white, $mix-percentage-lightest);
+$color-secondary-lightest-s: mix($color-secondary, $color-white, $mix-percentage-lightest-s);
+$color-secondary-dark: mix($color-secondary, $color-black, $mix-percentage-dark);
+$color-secondary-darker: mix($color-secondary, $color-black, $mix-percentage-darker);
+$color-secondary-darkest: mix($color-secondary, $color-black, $mix-percentage-darkest);
+$color-secondary-darkest-s: mix($color-secondary, $color-black, $mix-percentage-darkest-s);
+
+$color-light-grey: mix($color-grey, $color-white, $mix-percentage-light);
+$color-lighter-grey: mix($color-grey, $color-white, $mix-percentage-lighter);
+$color-lightest-grey: mix($color-grey, $color-white, $mix-percentage-lightest);
+$color-lightest-grey-s: mix($color-grey, $color-white, $mix-percentage-lightest-s);
+
+// sass-lint:disable-all
+:export {
+  colorPrimaryLight: $color-primary-light;
+  colorPrimaryLighter: $color-primary-lighter;
+  colorPrimaryLightest: $color-primary-lightest;
+  colorPrimaryLightestS: $color-primary-lightest-s;
+  colorPrimary: $color-primary;
+  colorPrimaryDark: $color-primary-dark;
+  colorPrimaryDarker: $color-primary-darker;
+  colorPrimaryDarkest: $color-primary-darkest;
+  colorPrimaryDarkestS: $color-primary-darkest-s;
+  colorSecondaryLight: $color-secondary-light;
+  colorSecondaryLighter: $color-secondary-lighter;
+  colorSecondaryLightest: $color-secondary-lightest;
+  colorSecondaryLightestS: $color-secondary-lightest-s;
+  colorSecondary: $color-secondary;
+  colorSecondaryDark: $color-secondary-dark;
+  colorSecondaryDarker: $color-secondary-darker;
+  colorSecondaryDarkest: $color-secondary-darkest;
+  colorSecondaryDarkestS: $color-secondary-darkest-s;
+  colorBlack: $color-black;
+  colorWhite: $color-white;
+  colorGrey: $color-grey;
+  colorLightGrey: $color-light-grey;
+  colorLighterGrey: $color-lighter-grey;
+  colorLightestGrey: $color-lightest-grey;
+  colorSuccess: $color-success;
+  colorDanger: $color-danger;
+  colorWarning: $color-warning;
+  colorCandidate: $color-candidate;
+  colorProspect: $color-prospect;
+  colorInstrument: $color-instrument;
+  colorClient: $color-client;
+  colorReject: $color-reject;
+}

@@ -14,6 +14,13 @@ const styleLoader = {
     publicPath: path.resolve(__dirname, 'dist'),
   }
 };
+const cssLoader = {
+  loader: 'css-loader',
+  options: {
+    modules: true,
+    localIdentName: '[name]__[local]__[hash:base64:5]',
+  }
+};
 // https://github.com/webpack-contrib/sass-loader
 const sassLoader = {
   loader: 'sass-loader',
@@ -30,25 +37,27 @@ module.exports = {
   },
   resolve: {
     modules: [path.resolve(__dirname, 'node_modules')],
-    extensions: ['*', '.js', '.jsx'],
+    extensions: ['*', '.js', '.jsx', '.png'],
   },
   module: {
     rules: [
       {
         test: /\.js|.jsx$/,
         // Using babel 7 https://babeljs.io/docs/en/v7-migration
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env', '@babel/preset-react']
-            }
-          }
-        ],
+        use: ['babel-loader'],
       },
       {
         test: /\.(s*)css$/,
-        use: [styleLoader, 'css-loader', sassLoader]
+        use: [styleLoader, cssLoader, sassLoader]
+      },
+      {
+        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        use: [{
+          loader: 'file-loader',
+          options: {
+            name: '[path][name].[ext]',
+          }
+        }]
       }
     ],
   },

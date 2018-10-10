@@ -1,0 +1,40 @@
+// sass-lint:disable-all
+.dflex {
+  display: flex;
+}
+
+.flexgrow {
+  flex-grow: 1;
+}
+
+.flexcolumn {
+  flex-direction: column;
+}
+
+.justifybetween {
+  justify-content: space-between;
+}
+
+.justifycenter {
+  justify-content: center;
+}
+
+.justifystart {
+  justify-content: flex-start;
+}
+
+.justifyend {
+  justify-content: flex-end;
+}
+
+.aligncenter {
+  align-items: center;
+}
+
+.alignstart {
+  align-items: flex-start;
+}
+
+.alignend {
+  align-items: flex-end;
+}
