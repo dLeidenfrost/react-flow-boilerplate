@@ -1,3 +1,9 @@
+// Root font size is 16 by default
+@function calculate-rem($size) {
+  $rem-size: $size / 16;
+  @return #{$rem-size}rem;
+}
+
 $font-family: 'Roboto';
 $font-style: 'normal';
 

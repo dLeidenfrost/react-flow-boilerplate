@@ -4,3 +4,4 @@ export const getJWT = (): string => {
   return jwt || '';
 };
 export const setJWT = (jwt: string): void => window.sessionStorage.setItem('jwt', jwt);
+export const clearJWT = (): void => window.sessionStorage.removeItem('jwt');

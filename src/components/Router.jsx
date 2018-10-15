@@ -5,7 +5,7 @@ import {
   Route,
   Link
 } from 'react-router-dom';
-import Home from './inner/Home';
+import Home from './inner/home/Home';
 import Login from './auth/Login';
 import Recover from './auth/Recover';
 import { PATHS } from './utils/globals';

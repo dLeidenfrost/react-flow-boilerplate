@@ -1,14 +1,13 @@
 /* @flow */
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
-import App from './components/App';
+import Store from './components/Store';
 
 const rootComponent = document.getElementById('app');
 
 if (rootComponent) {
   ReactDOM.render(
-    <App />,
+    <Store />,
     rootComponent,
   );
 }
-

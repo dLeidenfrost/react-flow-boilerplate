@@ -11,7 +11,7 @@ import cn from 'classnames';
 import { setJWT, getJWT } from '../../actions/token';
 import { getRandomJWT } from '../utils/helpers';
 import { PATHS } from '../utils/globals';
-import logo from '../../assets/img/test.png';
+import logo from '../../assets/img/logo_mfm.svg';
 import s from './Login.scss';
 import gs from '../../theme/general.scss';
 
@@ -44,8 +44,8 @@ class Login extends React.Component<LoginProps, LoginState> {
                 <div className={s.content}>
                   <Grid container spacing={0}>
                     <Grid item xs={12} sm={12}>
-                      <div className={cn(gs.dflex, gs.aligncenter, gs.justifycenter)}>
-                        <img src={logo} width="100px" />
+                      <div className={cn(gs.dflex, gs.aligncenter, gs.justifycenter, s.content)}>
+                        <img src={logo} width="200px" />
                       </div>
                     </Grid>
                   </Grid>

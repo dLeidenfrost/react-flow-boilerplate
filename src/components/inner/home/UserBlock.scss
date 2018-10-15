@@ -1,0 +1,19 @@
+@import '../../../theme/colors';
+
+.root {
+  margin-left: auto;
+
+  .button {
+    padding: .5rem;
+  }
+
+  .userbutton {
+    background-color: $color-white;
+    box-shadow: none;
+    margin-left: .5rem;
+
+    &:hover {
+      background-color: $color-light;
+    }
+  }
+}

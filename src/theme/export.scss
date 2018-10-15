@@ -29,6 +29,11 @@ $color-secondary-darker: mix($color-secondary, $color-black, $mix-percentage-dar
 $color-secondary-darkest: mix($color-secondary, $color-black, $mix-percentage-darkest);
 $color-secondary-darkest-s: mix($color-secondary, $color-black, $mix-percentage-darkest-s);
 
+// Application hover mixes
+$color-candidate-light: mix($color-candidate, $color-white, $mix-percentage-light);
+$color-candidate-dark: mix($color-candidate, $color-black, $mix-percentage-dark);
+$color-prospect-dark: mix($color-prospect, $color-black, $mix-percentage-dark);
+
 $color-light-grey: mix($color-grey, $color-white, $mix-percentage-light);
 $color-lighter-grey: mix($color-grey, $color-white, $mix-percentage-lighter);
 $color-lightest-grey: mix($color-grey, $color-white, $mix-percentage-lightest);
@@ -68,4 +73,7 @@ $color-lightest-grey-s: mix($color-grey, $color-white, $mix-percentage-lightest-
   colorInstrument: $color-instrument;
   colorClient: $color-client;
   colorReject: $color-reject;
+  appBarHeight: $app-bar-height;
+  drawerZIndex: $drawer-z-index;
+  drawerWidth: $drawer-width-export;
 }
