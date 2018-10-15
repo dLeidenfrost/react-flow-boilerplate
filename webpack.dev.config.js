@@ -6,7 +6,7 @@ module.exports = {
   devtool: 'inline-source-map',
   mode: 'development',
   devServer: {
-    contentBase: path.join(__dirname, 'dist'),
+    contentBase: './dist',
     compress: true,
     port: 3001,
     historyApiFallback: true,

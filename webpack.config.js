@@ -10,9 +10,6 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 // Custom style loader to create a large css file
 const styleLoader = {
   loader: MiniCssExtractPlugin.loader,
-  options: {
-    publicPath: path.resolve(__dirname, 'dist'),
-  }
 };
 const cssLoader = {
   loader: 'css-loader',
@@ -37,7 +34,7 @@ module.exports = {
   },
   resolve: {
     modules: [path.resolve(__dirname, 'node_modules')],
-    extensions: ['*', '.js', '.jsx', '.png'],
+    extensions: ['*', '.js', '.jsx'],
   },
   module: {
     rules: [
@@ -51,7 +48,7 @@ module.exports = {
         use: [styleLoader, cssLoader, sassLoader]
       },
       {
-        test: /\.(png|jpg|jpeg|gif|svg)$/,
+        test: /\.(jpe?g|png|gif|svg)$/i,
         use: [{
           loader: 'file-loader',
           options: {
