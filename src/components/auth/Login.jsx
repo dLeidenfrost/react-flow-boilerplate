@@ -1,6 +1,5 @@
 /* @flow */
 import React from 'react';
-import Paper from '@material-ui/core/Paper';
 import Grid from '@material-ui/core/Grid';
 import Typography from '@material-ui/core/Typography';
 import TextField from '@material-ui/core/TextField';
@@ -11,7 +10,9 @@ import cn from 'classnames';
 import { setJWT, getJWT } from '../../actions/token';
 import { getRandomJWT } from '../utils/helpers';
 import { PATHS } from '../utils/globals';
-import logo from '../../assets/img/logo_mfm.svg';
+import logo from '../../assets/img/logo-mfm-white.svg';
+import Person from '@material-ui/icons/Person';
+import LockOutlined from '@material-ui/icons/LockOutlined';
 import s from './Login.scss';
 import gs from '../../theme/general.scss';
 
@@ -25,6 +26,7 @@ type LoginState = {
   password: string,
 };
 
+
 class Login extends React.Component<LoginProps, LoginState> {
   onLogin = () => {
     const { history } = this.props;
@@ -36,60 +38,79 @@ class Login extends React.Component<LoginProps, LoginState> {
     const { from } = this.props.location.state || { from: { pathname: PATHS.HOME } };
     if (getJWT() && from) return <Redirect to={from} />;
     return (
-      <div className={cn(s.root)}>
+      <div className={cn(s.root, gs.dflex, gs.aligncenter, gs.justifycenter)}>
         <Grid container spacing={0}>
           <Grid item xs={12} sm={12}>
             <div className={cn(gs.dflex, gs.alignstart, gs.justifycenter, s.logincontainer)}>
-              <Paper>
+              <div className={s.login}>
                 <div className={s.content}>
                   <Grid container spacing={0}>
                     <Grid item xs={12} sm={12}>
                       <div className={cn(gs.dflex, gs.aligncenter, gs.justifycenter, s.content)}>
-                        <img src={logo} width="200px" />
+                        <img src={logo} className={s.logo} alt="Logotipo MFM" width="200px" />
                       </div>
+                      <div className={s.divider} />
+				              <h1 className={s.title}>Inner</h1>
                     </Grid>
                   </Grid>
                 </div>
-                <div className={s.divider} />
                 <div className={s.content}>
                   <Grid container spacing={0}>
                     <Grid item xs={12} sm={12}>
-                      <TextField
-                        label="Usuario"
-                        defaultValue="dmartinez"
-                        margin="normal"
-                        fullWidth
-                      />
+                      <div className={cn(gs.dflex, gs.alignstart, s.inputwrapper)}>
+                        <Person className={s.icon}/>
+                        <TextField
+                          placeholder="ID de usuario"
+                          defaultValue="dmartinez"
+                          className={s.input}
+                          fullWidth
+                        />
+                      </div>
                     </Grid>
                     <Grid item xs={12} sm={12}>
-                      <TextField
-                        label="Contraseña"
-                        defaultValue="dmartinez"
-                        type="password"
-                        margin="normal"
-                        fullWidth
-                      />
+                      <div className={cn(gs.dflex, gs.alignstart, s.inputwrapper)}>
+                        <LockOutlined className={s.icon}/>
+                        <TextField
+                          placeholder="Contraseña"
+                          defaultValue="dmartinez"
+                          type="password"
+                          className={s.input}
+                          fullWidth
+                        />
+                      </div>
                     </Grid>
                   </Grid>
                 </div>
-                <div className={s.divider} />
                 <div className={cn(gs.dflex, gs.aligncenter, gs.justifyend, s.content)}>
                   <Grid container spacing={0}>
-                    <Grid item xs={8} sm={8}>
-                      <div className={cn(gs.dflex, gs.aligncenter, gs.fullheight)}>
-                        <Link to="/recover">¿Olvidaste tu contraseña?</Link>
+                    <Grid item xs={12} sm={12}>
+                      <div className={cn(gs.dflex, gs.justifyend, gs.aligncenter, s.btnwrapper)}>
+                        <Button 
+                          onClick={this.onLogin} 
+                          fullWidth
+                          className={s.btn}
+                          variant="flat" 
+                          color="primary"
+                        >
+                          Iniciar Sesi&oacute;n
+                        </Button>
                       </div>
                     </Grid>
-                    <Grid item xs={4} sm={4}>
+                  </Grid>
+                  {/* <Grid container spacing={0}>
+                    <Grid item xs={12} sm={12}>
                       <div className={cn(gs.dflex, gs.justifyend, gs.aligncenter)}>
                         <Button onClick={this.onLogin} variant="contained" color="primary">
                           Ingresar
                         </Button>
                       </div>
                     </Grid>
-                  </Grid>
+                  </Grid> */}
                 </div>
-              </Paper>
+              </div>
+            </div>
+            <div className={s.footer}>
+              <span>© Todos los derechos reservados / MFM OPM®* SAPI DE CV SOFOM 2018</span>
             </div>
           </Grid>
         </Grid>
