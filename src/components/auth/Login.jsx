@@ -96,16 +96,14 @@ class Login extends React.Component<LoginProps, LoginState> {
                         </Button>
                       </div>
                     </Grid>
+                    {/* <Grid container spacing={0}>
+                      <Grid item xs={12} sm={12}>
+                        <div className={cn(gs.dflex, gs.justifycenter, gs.aligncenter, s.linkwrapper)}>
+                          <Link to="/recover">¿Olvidaste tu contraseña?</Link>
+                        </div>
+                      </Grid>
+                    </Grid> */}
                   </Grid>
-                  {/* <Grid container spacing={0}>
-                    <Grid item xs={12} sm={12}>
-                      <div className={cn(gs.dflex, gs.justifyend, gs.aligncenter)}>
-                        <Button onClick={this.onLogin} variant="contained" color="primary">
-                          Ingresar
-                        </Button>
-                      </div>
-                    </Grid>
-                  </Grid> */}
                 </div>
               </div>
             </div>
