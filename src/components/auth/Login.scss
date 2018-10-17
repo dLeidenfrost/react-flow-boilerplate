@@ -92,3 +92,30 @@
     box-sizing: border-box;
   }
 }
+
+.input {
+  .underline {
+    border-bottom-color: $color-lightest-grey;
+    &:after {
+      border-bottom-color: $color-lightest-grey;
+    }
+    &.focused:after {
+      border-bottom-color: $color-lightest-grey;
+    }
+    &.error:after {
+      border-bottom-color: color-lightest-grey;
+    }
+    &:before {
+      border-bottom-color: $color-lightest-grey;
+    }
+    &:hover:not(.disabled):not(.focused):not(.error):before {
+      border-bottom-color: $color-lightest-grey;
+    }
+    &.disabled:before {
+      border-bottom-color: $color-lightest-grey;
+    }
+  }
+  &:after {
+    border-bottom-color: $color-lightest-grey;
+  }
+}

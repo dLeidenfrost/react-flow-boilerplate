@@ -65,6 +65,14 @@ class Login extends React.Component<LoginProps, LoginState> {
                           placeholder="ID de usuario"
                           defaultValue="dmartinez"
                           className={s.input}
+                          InputProps={{
+                            classes:{
+                              underline: s.underline,
+                              focused: s.focused,
+                              disabled: s.disabled,
+                              error: s.error
+                            }
+                          }}
                           fullWidth
                         />
                       </div>
@@ -77,6 +85,14 @@ class Login extends React.Component<LoginProps, LoginState> {
                           defaultValue="dmartinez"
                           type="password"
                           className={s.input}
+                          InputProps={{
+                            classes:{
+                              underline: s.underline,
+                              focused: s.focused,
+                              disabled: s.disabled,
+                              error: s.error
+                            }
+                          }}
                           fullWidth
                         />
                       </div>
