@@ -13,6 +13,7 @@ import { PATHS } from '../utils/globals';
 import logo from '../../assets/img/logo-mfm-white.svg';
 import Person from '@material-ui/icons/Person';
 import LockOutlined from '@material-ui/icons/LockOutlined';
+import TrackEvent from '../ga/TrackEvent';
 import s from './Login.scss';
 import gs from '../../theme/general.scss';
 
@@ -33,6 +34,7 @@ class Login extends React.Component<LoginProps, LoginState> {
     const { from } = this.props.location.state || { from: { pathname: PATHS.HOME } }
     setJWT(getRandomJWT(30));
     history.push(from.pathname);
+    TrackEvent({category:'User', action:'do login on website', label:'login'});
   }
   render() {
     const { from } = this.props.location.state || { from: { pathname: PATHS.HOME } };

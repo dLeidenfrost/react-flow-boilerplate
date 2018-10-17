@@ -49,3 +49,9 @@ export type RequestStateType = {
     }
   }
 };
+// Analytics
+export type AnalyticsEventType = {
+  category: string,
+  action: string,
+  label: string
+};

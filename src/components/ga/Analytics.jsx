@@ -1,9 +1,10 @@
 /* @flow */
 import * as React from 'react';
 import ReactGA from 'react-ga';
+import { TRACKINGID } from '../utils/globals';
 
 const Analytics = (props: {}) => (
-  ReactGA.initialize('UA-127488522-1', { debug: true })
+  ReactGA.initialize(TRACKINGID, { debug: true })
 );
 
 export default Analytics;

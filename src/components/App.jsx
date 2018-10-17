@@ -1,7 +1,6 @@
 /* @flow */
 import * as React from 'react';
 import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles';
-import ReactGA from 'react-ga';
 import Analytics from './ga/Analytics';
 import Router from './Router';
 import style from '../theme/export.scss';

@@ -35,3 +35,6 @@ export const STATUS: { [string]: number } = {
   APPROVED: 2,
   REJECTED: 3,
 };
+
+// Analytics
+export const TRACKINGID:string = 'UA-127488522-1';
