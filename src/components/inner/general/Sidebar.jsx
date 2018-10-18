@@ -24,6 +24,7 @@ import s from './Sidebar.scss';
 import gs from '../../../theme/general.scss';
 import exportStyle from '../../../theme/export.scss';
 import { ROLES, AREAS } from '../../utils/globals';
+import TrackEvent from '../../ga/TrackEvent';
 
 // icons
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -54,6 +55,7 @@ class Sidebar extends React.Component<SidebarProps, SidebarState> {
   onLogout = (): void => {
     clearJWT();
     this.props.history.push(PATHS.LOGIN);
+    TrackEvent({category:'User', action:'do logout on website', label:'logout'});
   }
   render() {
     return (

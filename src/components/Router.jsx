@@ -12,6 +12,7 @@ import { PATHS } from './utils/globals';
 import ProtectedRoute from './auth/ProtectedRoute';
 import RequestsHome from './inner/requests/RequestsHome';
 import ThemeExample from './test/ThemeExample';
+import WithTracker from './ga/WithTracker';
 
 const Router = () => (
   <BrowserRouter>

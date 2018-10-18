@@ -74,3 +74,5 @@ export const PANELS: Array<{title: string, panel: string}> = [
   { title: 'Otros documentos', panel: PANEL_KEYS.OTHERS },
   { title: 'Instrumentación', panel: PANEL_KEYS.INSTRUMENTATION },
 ];
+// Analytics
+export const TRACKINGID:string = 'UA-127488522-1';
