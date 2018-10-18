@@ -1,8 +1,12 @@
 @import '../../../theme/layout';
 @import '../../../theme/colors';
 @import '../../../theme/fonts';
+@import '../../../theme/export';
 
 .root {
+  height: 100vh;
+  overflow: hidden;
+
   .main {
     background-color: $color-white;
     flex-grow: 1;
@@ -11,9 +15,6 @@
     padding-left: $drawer-width;
     position: relative;
     top: $app-bar-height;
-
-    .content {
-      padding: 1rem;
-    }
+    background-color: $color-lightest-grey-s;
   }
 }

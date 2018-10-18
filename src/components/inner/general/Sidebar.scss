@@ -1,0 +1,20 @@
+@import '../../../theme/layout';
+@import '../../../theme/colors';
+@import '../../../theme/fonts';
+
+.root {
+  .drawer {
+    background-color: $color-drawer-background;
+    min-width: $drawer-width;
+  }
+
+  .sidebar {
+    position: relative;
+    top: $app-bar-height;
+
+    .icon {
+      font-size: calculate-rem(24);
+      width: calculate-rem(24);
+    }
+  }
+}

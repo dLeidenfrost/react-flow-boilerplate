@@ -1,0 +1,24 @@
+@import '../../../theme/colors';
+@import '../../../theme/general';
+@import '../../../theme/export';
+
+.root {
+  flex-grow: 1;
+
+  .menu {
+    background-color: $color-prospect-dark;
+  }
+
+  .menuitem {
+    border-color: $color-white;
+    color: $color-white;
+  }
+
+  .indicator {
+    background-color: $color-white;
+  }
+
+  .scrollbutton {
+    color: $color-white;
+  }
+}

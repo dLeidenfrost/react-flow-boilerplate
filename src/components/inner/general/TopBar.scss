@@ -1,0 +1,11 @@
+@import '../../../theme/layout';
+@import '../../../theme/colors';
+@import '../../../theme/fonts';
+
+.root {
+  .appbar {
+    background-color: $color-white;
+    color: $color-dark;
+    z-index: $drawer-z-index + 1;
+  }
+}

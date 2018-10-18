@@ -1,0 +1,9 @@
+@import '../../../theme/colors';
+@import '../../../theme/general';
+@import '../../../theme/export';
+
+.root {
+  background-color: $color-prospect;
+  display: flex;
+  min-height: $detail-view-header-height;
+}

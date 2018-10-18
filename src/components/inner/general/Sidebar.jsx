@@ -2,8 +2,6 @@
 import * as React from 'react';
 import cn from 'classnames';
 import { withRouter } from 'react-router-dom';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
 import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
 import Hidden from '@material-ui/core/Hidden';
@@ -17,8 +15,8 @@ import Typography from '@material-ui/core/Typography';
 import Drawer from '@material-ui/core/Drawer';
 import DraftsIcon from '@material-ui/icons/Drafts';
 import Grid from '@material-ui/core/Grid';
+import TopBar from './TopBar';
 import UserBlock from './UserBlock';
-import ProtectedBy from '../../auth/ProtectedBy';
 import { PATHS } from '../../utils/globals';
 import { clearJWT } from '../../../actions/token';
 import LogoMfmBlack from '../../../assets/img/logo-mfm-black.svg';
@@ -60,12 +58,6 @@ class Sidebar extends React.Component<SidebarProps, SidebarState> {
   render() {
     return (
      <div className={s.root}>
-      <AppBar position="absolute" className={s.appbar}>
-        <Toolbar>
-          <img src={LogoMfmBlack} width="200px" />
-          <UserBlock />
-        </Toolbar>
-      </AppBar>
       <Drawer
         variant="permanent"
         classes={{
@@ -88,14 +80,6 @@ class Sidebar extends React.Component<SidebarProps, SidebarState> {
           </List>
         </div>
       </Drawer>
-      <main className={s.main}>
-        <div className={s.content}>
-          <Typography noWrap>Add general content in here...</Typography>
-          <ProtectedBy roles={[ROLES.DIRECTOR]} action="view">
-            <Typography noWrap>This can only be viewed by area legal!</Typography>
-          </ProtectedBy>
-        </div>
-      </main>
      </div> 
     )
   }

@@ -1,0 +1,29 @@
+@import '../../../../../theme/layout';
+@import '../../../../../theme/colors';
+@import '../../../../../theme/export';
+
+.root {
+  flex-grow: 1;
+
+  .container {
+    margin-top: 8px;
+  }
+
+  .filename {
+    align-items: center;
+    display: flex;
+    margin-right: 8px;
+
+    .icon {
+      margin-right: 4px;
+      margin-top: -4px;
+    }
+  }
+
+  .verticaldivider {
+    background-color: $color-lightest-grey;
+    height: 24px;
+    margin: 0 8px;
+    width: 1px;
+  }
+}

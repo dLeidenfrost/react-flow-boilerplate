@@ -30,12 +30,12 @@ type LoginState = {
 class Login extends React.Component<LoginProps, LoginState> {
   onLogin = () => {
     const { history } = this.props;
-    const { from } = this.props.location.state || { from: { pathname: PATHS.HOME } }
+    const { from } = this.props.location.state || { from: { pathname: PATHS.REQUESTS } }
     setJWT(getRandomJWT(30));
     history.push(from.pathname);
   }
   render() {
-    const { from } = this.props.location.state || { from: { pathname: PATHS.HOME } };
+    const { from } = this.props.location.state || { from: { pathname: PATHS.REQUESTS } };
     if (getJWT() && from) return <Redirect to={from} />;
     return (
       <div className={cn(s.root, gs.dflex, gs.aligncenter, gs.justifycenter)}>

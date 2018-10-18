@@ -8,6 +8,7 @@ export type ActionCreator = {
   type: string,
   data: any,
 };
+export type CrudActionType = 'INSERT' | 'UPDATE' | 'DELETE';
 // Entities
 export type PromotorStateType = {
   id: number,
@@ -29,6 +30,11 @@ export type ClientStateType = {
     buisnessName: string,
     currentPhase: number,
   }
+};
+export type DocumentStateType = {
+  title?: string,
+  filename?: string,
+  created?: string,
 };
 export type RequestStateType = {
   applications?: {
